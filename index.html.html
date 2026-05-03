@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="Productive Muslim"/>
+<meta name="theme-color" content="#050d14"/>
+<link rel="apple-touch-icon" href="data:image/png;base64,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"/>
+<title>Productive Muslim</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{
+  --teal:#00d4b8;--teal2:#00f5d4;--tdim:rgba(0,212,184,0.1);--tdim2:rgba(0,212,184,0.06);
+  --blue:#4facfe;--bdim:rgba(79,172,254,0.1);
+  --purple:#a78bfa;--pdim:rgba(167,139,250,0.1);
+  --amber:#f59e0b;--adim:rgba(245,158,11,0.1);
+  --rose:#f43f5e;--rdim:rgba(244,63,94,0.1);
+  --bg:#050d14;--bg2:#080f18;--bg3:#0c1520;
+  --card:rgba(8,18,28,0.97);--bdr:rgba(0,212,184,0.1);--bdr2:rgba(0,212,184,0.22);
+  --tx:#e2eff0;--tx2:#7fa8b0;--tx3:#3a5a62;
+}
+html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--tx);font-family:Inter,sans-serif;font-size:16px}
+::-webkit-scrollbar{display:none}
+button{border:none;cursor:pointer;font-family:Inter,sans-serif;font-size:16px}
+button:active{opacity:0.75;transform:scale(0.97)}
+input,textarea{font-family:Inter,sans-serif;font-size:16px;-webkit-appearance:none}
+.cinzel{font-family:Cinzel,serif}
+.arabic{font-family:'Scheherazade New',serif;direction:rtl;text-align:right}
+
+/* Animations */
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+@keyframes shimmer{0%{background-position:-300% 0}100%{background-position:300% 0}}
+@keyframes glow{0%,100%{box-shadow:0 0 15px rgba(0,212,184,0.1)}50%{box-shadow:0 0 30px rgba(0,212,184,0.25)}}
+.au{animation:fadeUp 0.35s ease both}
+.au2{animation:fadeUp 0.35s 0.07s ease both}
+.au3{animation:fadeUp 0.35s 0.14s ease both}
+
+/* Layout */
+#root{display:flex;flex-direction:column;height:100vh}
+.page{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:88px}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 120% 60% at 50% -10%,rgba(0,212,184,0.06),transparent 55%),radial-gradient(ellipse 80% 80% at 95% 95%,rgba(79,172,254,0.05),transparent);pointer-events:none;z-index:0}
+#root>*{position:relative;z-index:1}
+
+/* Top Nav */
+.topnav{padding:max(env(safe-area-inset-top,0px),18px) 18px 12px;background:linear-gradient(180deg,var(--bg) 70%,transparent);position:sticky;top:0;z-index:50;backdrop-filter:blur(10px)}
+
+/* Tab Bar */
+.tabbar{position:fixed;bottom:0;left:0;right:0;z-index:100;display:flex;background:rgba(5,13,20,0.97);border-top:1px solid rgba(0,212,184,0.1);padding-bottom:env(safe-area-inset-bottom,0);backdrop-filter:blur(20px)}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:9px 2px;border:none;background:none;position:relative;cursor:pointer}
+.tab::after{content:'';position:absolute;top:0;left:20%;right:20%;height:2px;background:linear-gradient(90deg,transparent,var(--teal),transparent);border-radius:0 0 2px 2px;opacity:0;transition:opacity 0.25s}
+.tab.on::after{opacity:1}
+.tab-i{font-size:20px;line-height:1;margin-bottom:3px;transition:transform 0.2s}
+.tab.on .tab-i{transform:scale(1.15)}
+.tab-l{font-size:9px;font-weight:600;color:var(--tx3);transition:color 0.2s;letter-spacing:0.3px}
+.tab.on .tab-l{color:var(--teal)}
+
+/* Cards */
+.card{background:var(--card);border:1px solid var(--bdr);border-radius:20px}
+.card-g{background:linear-gradient(145deg,rgba(8,22,35,0.99),rgba(5,14,22,0.99));border:1px solid var(--bdr2);border-radius:22px;position:relative;overflow:hidden}
+.card-g::before{content:'';position:absolute;top:-40%;right:-40%;width:180%;height:180%;background:radial-gradient(circle at 70% 30%,rgba(0,212,184,0.04),transparent 55%);pointer-events:none}
+
+/* Badges */
+.badge{display:inline-flex;align-items:center;padding:4px 12px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:0.6px;text-transform:uppercase}
+.bt{background:var(--tdim);border:1px solid rgba(0,212,184,0.28);color:var(--teal)}
+.bb{background:var(--bdim);border:1px solid rgba(79,172,254,0.25);color:var(--blue)}
+.bp{background:var(--pdim);border:1px solid rgba(167,139,250,0.25);color:var(--purple)}
+.ba{background:var(--adim);border:1px solid rgba(245,158,11,0.25);color:var(--amber)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:14px 22px;border-radius:15px;font-weight:600;font-size:15px;cursor:pointer;border:none;transition:all 0.2s}
+.btn-t{background:linear-gradient(135deg,var(--teal),var(--teal2));color:#03120f}
+.btn-o{background:transparent;border:1px solid var(--bdr2);color:var(--teal)}
+.btn-sm{padding:10px 16px;font-size:13px;border-radius:12px}
+
+/* Dividers */
+.dg{height:1px;background:linear-gradient(90deg,transparent,rgba(0,212,184,0.2),transparent);margin:16px 0}
+
+/* Progress */
+.pbar{height:5px;background:rgba(0,212,184,0.08);border-radius:3px;overflow:hidden}
+.pbar-f{height:100%;background:linear-gradient(90deg,var(--teal),var(--blue));border-radius:3px;transition:width 0.7s}
+
+/* ── BIG CHECKBOX ── */
+.check-row{display:flex;align-items:flex-start;gap:14px;padding:14px 16px;border-bottom:1px solid rgba(0,212,184,0.05);cursor:pointer;transition:background 0.15s;min-height:60px}
+.check-row:active{background:rgba(0,212,184,0.03)}
+.check-row:last-child{border-bottom:none}
+.check-box{width:28px;height:28px;border-radius:8px;border:2px solid rgba(0,212,184,0.3);background:transparent;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;transition:all 0.2s}
+.check-box.done{background:linear-gradient(135deg,var(--teal),var(--teal2));border-color:var(--teal);box-shadow:0 0 12px rgba(0,212,184,0.3)}
+.check-box.done::after{content:'✓';color:#03120f;font-size:16px;font-weight:800}
+.check-label{font-size:15px;color:var(--tx);line-height:1.5;flex:1;padding-top:2px}
+.check-label.done{color:var(--tx3);text-decoration:line-through}
+
+/* Schedule Block */
+.sched-block{margin:0 16px 14px;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.06)}
+.sched-hdr{display:flex;align-items:center;gap:12px;padding:16px 18px;cursor:pointer;transition:background 0.15s;position:relative}
+.sched-hdr:active{background:rgba(255,255,255,0.03)}
+.sched-hdr-accent{width:4px;border-radius:2px;flex-shrink:0;align-self:stretch}
+.sched-time{font-size:11px;color:var(--tx3);font-weight:500;margin-bottom:2px}
+.sched-label{font-size:16px;font-weight:700;color:var(--tx)}
+.sched-icon{font-size:26px;flex-shrink:0}
+.sched-arr{font-size:11px;color:var(--tx3);margin-left:auto;transition:transform 0.25s;flex-shrink:0}
+.sched-body{display:none;padding:4px 0 8px}
+.sched-body.open{display:block}
+.sched-warning{margin:0 16px 10px;padding:10px 13px;border-radius:10px;background:rgba(245,158,11,0.06);border-left:3px solid rgba(245,158,11,0.4);font-size:13px;color:rgba(245,158,11,0.8);line-height:1.6}
+.sched-prog{margin:0 16px 10px;font-size:11px;color:var(--tx3)}
+
+/* Duas */
+.dua-cat{margin:0 16px 12px}
+.dua-cat-hdr{display:flex;align-items:center;gap:9px;padding:14px 16px;background:rgba(8,22,35,0.8);border:1px solid var(--bdr);border-radius:16px;cursor:pointer;margin-bottom:2px;transition:border-color 0.2s}
+.dua-cat-hdr.open{border-color:rgba(0,212,184,0.3)}
+.dua-cat-lbl{flex:1;font-size:15px;font-weight:600;color:var(--tx)}
+.dua-card{background:rgba(5,14,22,0.9);border:1px solid rgba(0,212,184,0.07);border-radius:14px;padding:18px;margin-bottom:8px}
+.dua-ar{font-family:'Scheherazade New',serif;font-size:22px;color:rgba(224,239,240,0.92);direction:rtl;text-align:right;line-height:2.2;margin-bottom:10px}
+.dua-tr{font-size:13px;color:var(--teal);line-height:1.7;margin-bottom:6px;font-style:italic}
+.dua-en{font-size:14px;color:var(--tx2);line-height:1.7;margin-bottom:8px}
+.dua-src{font-size:11px;color:var(--tx3);font-weight:600}
+
+/* Dhikr counter */
+.dhikr-card{margin:0 16px 14px;border-radius:20px;overflow:hidden;background:rgba(8,22,35,0.9);border:1px solid var(--bdr)}
+.dhikr-name{font-size:16px;font-weight:700;color:var(--tx);padding:16px 18px 4px}
+.dhikr-ar{font-family:'Scheherazade New',serif;font-size:20px;color:rgba(0,212,184,0.8);direction:rtl;text-align:right;padding:0 18px 12px;line-height:2}
+.dhikr-counter{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-top:1px solid rgba(0,212,184,0.08)}
+.dhikr-count{font-family:Cinzel,serif;font-size:36px;font-weight:700;color:var(--teal)}
+.dhikr-target{font-size:12px;color:var(--tx3);margin-top:2px}
+.dhikr-btn{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--teal2));color:#03120f;font-size:28px;font-weight:700;display:flex;align-items:center;justify-content:center;transition:all 0.15s}
+.dhikr-btn:active{transform:scale(0.9);box-shadow:0 0 20px rgba(0,212,184,0.4)}
+.dhikr-reset{font-size:12px;color:var(--tx3);padding:0 18px 14px;cursor:pointer}
+
+/* Namaz steps */
+.namaz-prayer{margin:0 16px 14px}
+.namaz-hdr{display:flex;align-items:center;gap:12px;padding:16px;background:rgba(8,22,35,0.9);border:1px solid var(--bdr);border-radius:18px;cursor:pointer;margin-bottom:2px}
+.namaz-name{font-size:17px;font-weight:700;color:var(--tx);flex:1}
+.namaz-rakaat{font-size:12px;color:var(--tx3)}
+.namaz-step{display:flex;gap:14px;padding:13px 16px;border-bottom:1px solid rgba(0,212,184,0.05);align-items:flex-start}
+.namaz-step:last-child{border-bottom:none}
+.namaz-num{width:30px;height:30px;border-radius:50%;background:var(--tdim);border:1px solid rgba(0,212,184,0.25);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--teal);flex-shrink:0;margin-top:2px}
+.namaz-step-txt{font-size:15px;color:var(--tx2);line-height:1.6;flex:1}
+.namaz-step-ar{font-family:'Scheherazade New',serif;font-size:17px;color:rgba(0,212,184,0.7);direction:rtl;text-align:right;margin-top:5px;line-height:2}
+
+/* Streak */
+.streak-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 16px 14px}
+.streak-card{background:rgba(8,22,35,0.9);border:1px solid var(--bdr);border-radius:18px;padding:18px}
+.streak-cat{font-size:13px;font-weight:600;color:var(--tx2);margin-bottom:10px}
+.streak-num{font-family:Cinzel,serif;font-size:32px;font-weight:700;color:var(--teal);line-height:1}
+.streak-label{font-size:11px;color:var(--tx3);margin-top:3px}
+.streak-dots{display:flex;gap:4px;margin-top:10px;flex-wrap:wrap}
+.sdot{width:10px;height:10px;border-radius:50%;background:rgba(0,212,184,0.12);transition:background 0.2s}
+.sdot.done{background:var(--teal)}
+.streak-tap{width:100%;margin-top:12px;padding:12px;border-radius:12px;background:var(--tdim);border:1px solid rgba(0,212,184,0.2);color:var(--teal);font-size:13px;font-weight:600;cursor:pointer;transition:all 0.2s}
+.streak-tap:active{background:rgba(0,212,184,0.2)}
+
+/* Sunnah */
+.sunnah-item{margin:0 16px 10px;padding:16px;background:rgba(8,22,35,0.9);border:1px solid var(--bdr);border-radius:16px}
+.sunnah-title{font-size:16px;font-weight:700;color:var(--tx);margin-bottom:5px}
+.sunnah-desc{font-size:14px;color:var(--tx2);line-height:1.7}
+.sunnah-src{font-size:11px;color:var(--teal);margin-top:7px;font-weight:600}
+
+/* Shield */
+.shield-section{margin:0 16px 14px;padding:18px;background:rgba(8,22,35,0.9);border:1px solid rgba(244,63,94,0.15);border-radius:20px}
+.shield-title{font-size:16px;font-weight:700;color:var(--rose);margin-bottom:12px}
+.shield-item{display:flex;gap:12px;margin-bottom:12px;align-items:flex-start}
+.shield-num{width:26px;height:26px;border-radius:50%;background:var(--rdim);border:1px solid rgba(244,63,94,0.25);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--rose);flex-shrink:0;margin-top:2px}
+.shield-txt{font-size:14px;color:var(--tx2);line-height:1.7;flex:1}
+.shield-ar{font-family:'Scheherazade New',serif;font-size:18px;color:rgba(244,63,94,0.7);direction:rtl;text-align:right;margin-top:4px;line-height:2}
+
+/* Expander */
+.expander{border:1px solid var(--bdr);border-radius:18px;margin-bottom:10px;overflow:hidden;background:rgba(8,22,35,0.92)}
+.exp-h{display:flex;align-items:center;padding:16px 18px;gap:12px;cursor:pointer;transition:background 0.15s}
+.exp-h:active{background:rgba(255,255,255,0.025)}
+.exp-ico{font-size:20px;flex-shrink:0}
+.exp-ttl{flex:1;font-size:15px;font-weight:600;color:#bcd4d8}
+.exp-arr{font-size:11px;color:var(--tx3);transition:transform 0.28s;flex-shrink:0}
+.exp-body{padding:0 18px 16px;border-top:1px solid rgba(0,212,184,0.07);display:none}
+.exp-body.open{display:block}
+
+/* Loader */
+.ldr{display:flex;flex-direction:column;align-items:center;padding:50px 20px;gap:14px}
+.spinner{width:36px;height:36px;border:2px solid rgba(0,212,184,0.1);border-top-color:var(--teal);border-radius:50%;animation:spin 0.9s linear infinite}
+
+/* Footer */
+.footer{text-align:center;padding:22px 16px 6px;line-height:1.9;font-size:10px;color:rgba(0,212,184,0.25);font-style:italic}
+</style>
+</head>
+<body>
+<div id="root">
+  <div class="page" id="page"></div>
+  <div class="tabbar" id="tabbar"></div>
+</div>
+<script>
+'use strict';
+
+// ── STORAGE ──────────────────────────────────────────────────────────────────
+const ls=(k,d)=>{try{const v=localStorage.getItem(k);return v!=null?JSON.parse(v):d}catch{return d}};
+const lss=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch{}};
+const today=()=>new Date().toISOString().split('T')[0];
+
+// ── DOM ───────────────────────────────────────────────────────────────────────
+function el(tag,cls,ch,at){
+  const e=document.createElement(tag);
+  if(cls)e.className=cls;
+  if(at)for(const[k,v]of Object.entries(at)){
+    if(k==='style'&&typeof v==='object')Object.assign(e.style,v);
+    else if(k==='onclick')e.addEventListener('click',v);
+    else e.setAttribute(k,String(v));
+  }
+  for(const c of[].concat(ch||[]).flat(99)){
+    if(c==null)continue;
+    if(c instanceof Node)e.appendChild(c);
+    else e.appendChild(document.createTextNode(String(c)));
+  }
+  return e;
+}
+const dv=(cls,ch,at)=>el('div',cls,ch,at);
+const sp=(cls,ch,at)=>el('span',cls,ch,at);
+const pt=(cls,ch,at)=>el('p',cls,ch,at);
+const bt=(cls,ch,at)=>el('button',cls,ch,at);
+function clr(n){while(n.firstChild)n.removeChild(n.firstChild);return n}
+
+function expander(icon,title,bodyFn){
+  let open=false;
+  const body=dv('exp-body');
+  const content=typeof bodyFn==='function'?bodyFn():bodyFn;
+  if(typeof content==='string')body.appendChild(pt(null,content,{style:{fontSize:14,color:'var(--tx2)',lineHeight:1.75,marginTop:12}}));
+  else if(content instanceof Node)body.appendChild(content);
+  const arr=sp('exp-arr','▼');
+  const hdr=dv('exp-h',[sp('exp-ico',icon),sp('exp-ttl',title),arr],{onclick:()=>{
+    open=!open;body.classList.toggle('open',open);arr.style.transform=open?'rotate(180deg)':'none';
+  }});
+  return dv('expander',[hdr,body]);
+}
+
+// ── DATA ──────────────────────────────────────────────────────────────────────
+const MILESTONES=[1000,5000,10000,20000,30000,40000,50000];
+
+const SCHEDULE=[
+  {time:"2:30–3:30 AM",label:"Tahajjud",icon:"🌑",accent:"#a78bfa",
+   warning:"⚠️ No phone. No Instagram. This hour is sacred.",
+   items:["Wake up, make wudu with full intention","Pray 2–8 rakaat Tahajjud (minimum 2)","Make heartfelt duaa in sujood — most powerful hour","Dua of Yunus 100x: La ilaha illa anta subhanaka inni kuntu minaz-zalimin","Recite Surah Al-Mulk or last 2 ayahs Al-Baqarah","Sit in stillness — set intentions for the day"]},
+  {time:"5:00–6:30 AM",label:"Fajr",icon:"🌅",accent:"#f59e0b",
+   items:["Fajr salah — on time, never delayed","Morning adhkar (Hisnul Muslim)","Sayyid al-Istighfar after Fajr","Hasbi-Allah la ilaha illa huwa — 7x morning","Quran recitation — 1 page Tajweed focus","1–2 hadiths from Riyadh as-Saliheen + reflection","Rabbi zidni ilma before studying"]},
+  {time:"6:30–8:00 AM",label:"Morning Power",icon:"💪",accent:"#00d4b8",
+   warning:"📵 Instagram: max 10 mins AFTER journaling only.",
+   items:["Dua waking up + bathroom duas","Mirror dua: Allahumma hassanta khalqi fahassin khuluqi","Exercise — 45 mins (run, gym, home workout)","Cold shower + fresh up","Breakfast — no scrolling, listen to Quran","Journaling — gratitude, niyyah, 1 Islamic reflection"]},
+  {time:"9:00 AM–1:00 PM",label:"Deep Work",icon:"🎯",accent:"#4facfe",
+   warning:"🚫 No lust, no entertainment, no doomscrolling.",
+   items:["Job applications — LinkedIn, tailored CVs","Upskilling — Power BI, SQL, Coursera modules","Rabbi ishrah sadri before starting","Phone in another room — full focus mode","Astaghfirullah 3x when tempted to lose focus"]},
+  {time:"1:00–2:30 PM",label:"Dhuhr + Rest",icon:"🕐",accent:"#a78bfa",
+   items:["Dhuhr salah — sunnah before and after","Sunnah of the day — implement consciously","Lunch — Bismillah, eat sunnah style (small, blessed)","20-min qailula (nap) — sunnah of the Prophet ﷺ","Dua after eating: Alhamdulillahil-ladhi at'amana"]},
+  {time:"2:30–5:00 PM",label:"Afternoon",icon:"📚",accent:"#00d4b8",
+   items:["Tafseer — 2 ayahs deep (Ibn Kathir abridged)","Skill building continued","Asr salah — stop everything, pray on time","After Asr: Hasbi-Allah 7x evening","Review job applications, follow up emails"]},
+  {time:"5:00–7:00 PM",label:"Golden Hour",icon:"🌇",accent:"#f59e0b",
+   items:["Walk outside — dhikr while walking","Quran memorization revision — repeat yesterday's ayahs","Learn 1 new ayah for hifz","Before going out: Bismillah tawakkaltu alallah","Reflect: what sunnah did I practice today?"]},
+  {time:"7:00–10:00 PM",label:"Maghrib–Isha",icon:"🌙",accent:"#a78bfa",
+   items:["Maghrib salah + evening adhkar","Dinner with family — phone away, be present","Dua for parents: Rabbir hamhuma kama rabbayani saghira","Isha salah + witr","Hifz — memorize 1 new ayah, revise Juz Amma","Seerah — 10 pages The Sealed Nectar"]},
+  {time:"10:00–11:00 PM",label:"Wind-Down",icon:"✨",accent:"#4facfe",
+   warning:"📵 Phone on DND. No social media after Isha.",
+   items:["Evening journal — what did I learn? what sunnah?","Recite Surah Al-Mulk (protection for the grave)","Last 3 surahs 3x each","Sleep dua: Allahummah bismika amootu wa ahya","Set alarm for Tahajjud (2:30 AM)"]},
+];
+
+const DUAS=[
+  {cat:"🌑 Tahajjud",id:"tahajjud",duas:[
+    {ar:"اللَّهُمَّ أَعْطِنِي فَوْقَ أَمَلِي",tr:"Allāhumma a'ṭinī fawqa amalī",en:"O Allah, give me more than I hope for.",src:"Tirmidhi"},
+    {ar:"اللَّهُمَّ اخْتَرْ لِي وَلَا تَخْتَرْ عَلَيَّ",tr:"Allāhumma ikhtar lī wa lā takhtar 'alayya",en:"O Allah, choose for me and do not let me choose against myself.",src:"Qur'an 2:216"},
+    {ar:"رَبِّ إِنِّي لِمَا أَنزَلْتَ إِلَيَّ مِنْ خَيْرٍ فَقِيرٌ",tr:"Rabbi innī limā anzalta ilayya min khayrin faqīr",en:"My Lord, I am in absolute need of whatever good You send down to me.",src:"Quran 28:24"},
+  ]},
+  {cat:"🌅 Morning",id:"morning",duas:[
+    {ar:"الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا",tr:"Alhamdu lillahil-ladhi ahyana ba'da ma amatana",en:"All praise for Allah who gave us life after causing us to die.",src:"Bukhari"},
+    {ar:"اللَّهُمَّ حَسَّنْتَ خَلْقِي فَحَسِّنْ خُلُقِي",tr:"Allahumma hassanta khalqi fahassin khuluqi",en:"O Allah, You made my physical form beautiful, so beautify my character too.",src:"Ahmad"},
+    {ar:"حَسْبِيَ اللَّهُ لَا إِلَهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ",tr:"Hasbiyallahu la ilaha illa huwa alayhi tawakkaltu",en:"Sufficient for me is Allah; there is no deity except Him. On Him I have relied.",src:"Abu Dawud — 7x morning"},
+    {ar:"اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ",tr:"Allahumma inni a'udhu bika minal-hammi wal-hazan",en:"O Allah, I seek refuge from anxiety, grief, weakness and laziness.",src:"Bukhari 6369"},
+  ]},
+  {cat:"📖 Knowledge",id:"knowledge",duas:[
+    {ar:"رَبِّ زِدْنِي عِلْمًا",tr:"Rabbi zidni ilma",en:"My Lord, increase me in knowledge.",src:"Quran 20:114"},
+    {ar:"اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا",tr:"Allahumma inni as'aluka 'ilman nafi'an wa rizqan tayyiban",en:"O Allah, I ask You for beneficial knowledge, pure provision, and accepted deeds.",src:"Ibn Majah 925"},
+    {ar:"رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي",tr:"Rabbi ishrah li sadri wa yassir li amri",en:"My Lord, expand my chest and ease my task — for interviews, exams, difficult moments.",src:"Quran 20:25-28"},
+  ]},
+  {cat:"💼 Rizq & Career",id:"rizq",duas:[
+    {ar:"اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ",tr:"Allahummak-fini bihalaalika 'an haraamika",en:"O Allah, suffice me with what is lawful, keep me from what is forbidden.",src:"Tirmidhi 3563"},
+    {ar:"يَا فَتَّاحُ يَا رَزَّاقُ يَا كَرِيمُ",tr:"Ya Fattahu Ya Razzaqu Ya Karim",en:"O Opener of doors, O Provider, O Most Generous — 41x for job & success.",src:"Asma ul-Husna"},
+    {ar:"رَبِّ يَسِّرْ وَلَا تُعَسِّرْ وَتَمِّمْ بِالْخَيْرِ",tr:"Rabbi yassir wa la tu'assir wa tammim bil-khayr",en:"My Lord, make things easy, do not make them difficult, and complete with goodness.",src:"Authenticated"},
+  ]},
+  {cat:"🛡️ Against Temptation",id:"nafs",duas:[
+    {ar:"يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ",tr:"Ya muqallibal-quloob thabbit qalbi 'ala deenik",en:"O Turner of hearts, keep my heart firm upon Your religion.",src:"Tirmidhi"},
+    {ar:"رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا",tr:"Rabbana la tuzigh qulubana ba'da idh hadaytana",en:"Our Lord, do not let our hearts deviate after You have guided us.",src:"Quran 3:8"},
+  ]},
+  {cat:"💙 Hardship & Anxiety",id:"hardship",duas:[
+    {ar:"لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ",tr:"La ilaha illa anta subhanaka inni kuntu minaz-zalimeen",en:"There is no god but You — Dua of Yunus ﷺ — 100x in sujood.",src:"Quran 21:87"},
+    {ar:"حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ",tr:"Hasbunallahu wa ni'mal-wakeel",en:"Allah is sufficient for us, and He is the best disposer of affairs.",src:"Quran 3:173"},
+    {ar:"يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ",tr:"Ya Hayyu Ya Qayyum birahmatika astaghith",en:"O Living, O Self-Sustaining — in Your mercy do I seek relief.",src:"Tirmidhi"},
+  ]},
+  {cat:"🤲 Parents & Family",id:"parents",duas:[
+    {ar:"رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",tr:"Rabbir-hamhuma kama rabbayani saghira",en:"My Lord, have mercy upon them as they raised me when I was young.",src:"Quran 17:24"},
+    {ar:"رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ",tr:"Rabbana hab lana min azwajina wa dhurriyyatina qurrata a'yun",en:"Our Lord, grant us from our spouses and offspring comfort to our eyes.",src:"Quran 25:74"},
+  ]},
+  {cat:"🕌 After Salah",id:"after_salah",duas:[
+    {ar:"أَسْتَغْفِرُ اللَّهَ ٣×",tr:"Astaghfirullah 3x, then Allahumma antas-salam wa minkas-salam",en:"I seek Allah's forgiveness 3x. O Allah You are Peace and from You is peace.",src:"Muslim"},
+    {ar:"آيَةُ الْكُرْسِيِّ بَعْدَ كُلِّ صَلَاةٍ",tr:"Ayatul Kursi after every fard salah",en:"Whoever recites Ayatul Kursi after every obligatory prayer, nothing prevents him from entering Paradise except death.",src:"An-Nasa'i"},
+  ]},
+];
+
+const DHIKR_TYPES=[
+  {name:"Salawat",target:100,ar:"اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ",tr:"Allahumma salli 'ala Muhammad",benefit:"Every salawat earns 10 blessings from Allah"},
+  {name:"Istighfar",target:100,ar:"أَسْتَغْفِرُ اللَّهَ",tr:"Astaghfirullaha wa atubu ilayh",benefit:"Opens closed doors of rizq and removes worries"},
+  {name:"SubhanAllah",target:100,ar:"سُبْحَانَ اللَّهِ",tr:"SubhanAllah",benefit:"Plants a tree in Jannah"},
+  {name:"Alhamdulillah",target:100,ar:"الْحَمْدُ لِلَّهِ",tr:"Alhamdulillah",benefit:"Fills the scales of good deeds"},
+  {name:"Allahu Akbar",target:100,ar:"اللَّهُ أَكْبَرُ",tr:"Allahu Akbar",benefit:"Reminds the heart of Allah's greatness"},
+  {name:"La ilaha illa Allah",target:100,ar:"لَا إِلَهَ إِلَّا اللَّهُ",tr:"La ilaha illa Allah",benefit:"Best thing ever said — renews imaan"},
+];
+
+const PRAYERS=[
+  {name:"Fajr",rakaat:"2 Sunnah + 2 Fard",icon:"🌅",color:"#f59e0b"},
+  {name:"Dhuhr",rakaat:"4 Sunnah + 4 Fard + 2 Sunnah",icon:"☀️",color:"#4facfe"},
+  {name:"Asr",rakaat:"4 Fard",icon:"🌤️",color:"#f59e0b"},
+  {name:"Maghrib",rakaat:"3 Fard + 2 Sunnah",icon:"🌙",color:"#a78bfa"},
+  {name:"Isha",rakaat:"4 Fard + 2 Sunnah + 3 Witr",icon:"🌑",color:"#a78bfa"},
+];
+
+const SALAH_STEPS=[
+  {n:1,title:"Make Niyyah",desc:"Stand facing Qiblah. Make intention in your heart for the specific prayer.",ar:""},
+  {n:2,title:"Takbiratul Ihram",desc:"Raise hands to earlobes, say Allahu Akbar — you have entered salah.",ar:"اللَّهُ أَكْبَرُ"},
+  {n:3,title:"Qiyam — Recite Fatiha",desc:"Fold hands (right over left on chest). Recite Surah Al-Fatiha silently or aloud.",ar:"بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ..."},
+  {n:4,title:"Recite a Surah",desc:"After Fatiha, recite any surah or 3 ayahs. Common: Al-Ikhlas, Al-Kafirun, Al-Asr.",ar:""},
+  {n:5,title:"Ruku",desc:"Bow with hands on knees, back straight. Say SubhanAllah 3x minimum.",ar:"سُبْحَانَ رَبِّيَ الْعَظِيمِ"},
+  {n:6,title:"I'tidal — Rise from Ruku",desc:"Rise saying 'Sami Allahu liman hamidah', then 'Rabbana lakal hamd'.",ar:"سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ · رَبَّنَا لَكَ الْحَمْدُ"},
+  {n:7,title:"First Sujood",desc:"Go to prostration — forehead, nose, both palms, knees, toes on ground. Say SubhanAllah 3x.",ar:"سُبْحَانَ رَبِّيَ الْأَعْلَى"},
+  {n:8,title:"Sitting between Sujood",desc:"Rise briefly saying 'Allahu Akbar'. Say Rabbighfirli once.",ar:"رَبِّ اغْفِرْ لِي"},
+  {n:9,title:"Second Sujood",desc:"Return to prostration. This is the most powerful position — make dua here.",ar:"سُبْحَانَ رَبِّيَ الْأَعْلَى"},
+  {n:10,title:"Tashahhud",desc:"After 2nd rakaat sit and recite At-Tashahhud, then Durood Ibrahim, then Dua.",ar:"التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ..."},
+  {n:11,title:"Tasleem",desc:"Turn right saying 'Assalamu Alaikum wa Rahmatullah', then left. Salah complete.",ar:"السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ"},
+];
+
+const STREAK_CATS=[
+  {id:"fajr",label:"Fajr on Time",icon:"🌅"},
+  {id:"quran",label:"Quran Daily",icon:"📖"},
+  {id:"tahajjud",label:"Tahajjud",icon:"🌑"},
+  {id:"exercise",label:"Exercise",icon:"💪"},
+  {id:"noInstagram",label:"No Instagram",icon:"📵"},
+  {id:"dhikr",label:"100 Dhikr",icon:"📿"},
+  {id:"journal",label:"Journaling",icon:"📝"},
+  {id:"sunnah",label:"Sunnah Acts",icon:"⭐"},
+  {id:"sadaqah",label:"Sadaqah",icon:"💝"},
+  {id:"nolust",label:"Pure Eyes",icon:"🛡️"},
+];
+
+const SUNNAH_LIST=[
+  {title:"Miswak before salah",desc:"Use miswak (or toothbrush) before every prayer — 70x reward increase.",src:"Bukhari"},
+  {title:"Eat with right hand, 3 fingers",desc:"Eat sunnah style — small bites, right hand, say Bismillah. End with Alhamdulillah.",src:"Muslim"},
+  {title:"Enter home with salaam",desc:"Say Assalamu Alaikum when entering your home, even if alone. Brings barakah.",src:"Abu Dawud"},
+  {title:"Sleep on right side",desc:"Face Qiblah direction, sleep on right side. Say sleep dua: Allahumma bismika amootu.",src:"Bukhari"},
+  {title:"20-min Qailula nap",desc:"Short nap after Dhuhr — sunnah of the Prophet ﷺ. Increases afternoon productivity.",src:"Ibn Majah"},
+  {title:"Greet with full salam",desc:"Say full 'Assalamu Alaikum wa Rahmatullahi wa Barakatuh' — 30 hasanat.",src:"Abu Dawud"},
+  {title:"Walk to masjid for salah",desc:"Every step to the masjid is a hasanah and sin erased. Friday Jummah especially.",src:"Muslim"},
+  {title:"Drink water sitting, 3 sips",desc:"Never drink standing. 3 sips with Bismillah at start, Alhamdulillah at end.",src:"Muslim"},
+];
+
+const SHIELD_LIST=[
+  {title:"Morning Adhkar Shield",ar:"أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",tr:"A'udhu bikalimatillahit-tammati min sharri ma khalaq",en:"Say 3x every morning for complete protection from all harm.",src:"Muslim"},
+  {title:"Ayatul Kursi Guard",ar:"اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ",tr:"Allahu la ilaha illa huwal hayyul qayyum...",en:"Read after every fard salah. Read before sleep — an angel guards you all night.",src:"Bukhari"},
+  {title:"Last 3 Surahs 3x",ar:"قُلْ هُوَ اللَّهُ أَحَدٌ · الْفَلَقُ · النَّاسُ",tr:"Al-Ikhlas + Al-Falaq + An-Nas × 3",en:"Morning and evening — protection from evil eye, black magic, jinns.",src:"Abu Dawud"},
+  {title:"Dua Leaving Home",ar:"بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",tr:"Bismillahi tawakkaltu alallahi la hawla wa la quwwata illa billah",en:"Say every time you leave home — protected until you return.",src:"Tirmidhi"},
+];
+
+// ── STATE ─────────────────────────────────────────────────────────────────────
+let TAB='schedule';
+const SCROLL={};
+
+// ── SCHEDULE TAB ──────────────────────────────────────────────────────────────
+function renderSchedule(pg){
+  const checks=ls('checks_'+today(),{});
+
+  pg.appendChild(dv('topnav au',[
+    dv(null,[
+      pt('cinzel','Productive Muslim',{style:{fontSize:20,fontWeight:700,background:'linear-gradient(135deg,#00d4b8,#4facfe)',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent'}}),
+      pt(null,"Today's Power Schedule",{style:{fontSize:12,color:'var(--tx3)',marginTop:2}}),
+    ]),
+    dv(null,[
+      pt(null,Object.values(checks).filter(Boolean).length+'',{style:{fontFamily:'Cinzel,serif',fontSize:22,fontWeight:700,color:'var(--teal)',textAlign:'right'}}),
+      pt(null,'done',{style:{fontSize:9,color:'var(--tx3)',textAlign:'right'}}),
+    ]),
+  ],{style:{display:'flex',alignItems:'center',justifyContent:'space-between'}}));
+
+  // Progress bar
+  const total=SCHEDULE.reduce((a,b)=>a+b.items.length,0);
+  const done=Object.values(checks).filter(Boolean).length;
+  const pc=dv('au2',null,{style:{margin:'0 16px 14px'}});
+  pc.appendChild(dv(null,[
+    sp(null,done+' of '+total+' tasks',{style:{fontSize:11,color:'var(--teal)',fontWeight:600}}),
+    sp(null,' · '+Math.round(done/total*100)+'%',{style:{fontSize:11,color:'var(--tx3)'}}),
+  ],{style:{marginBottom:7}}));
+  pc.appendChild(dv('pbar',dv('pbar-f',null,{style:{width:(done/total*100)+'%'}})));
+  pg.appendChild(pc);
+
+  SCHEDULE.forEach(block=>{
+    let open=false;
+    const body=dv('sched-body');
+
+    // Warning
+    if(block.warning){
+      const w=dv('sched-warning');w.textContent=block.warning;
+      body.appendChild(w);
+    }
+
+    // Checklist
+    const checksDone=block.items.filter((_,i)=>checks[block.label+'_'+i]).length;
+    const prog=pt('sched-prog',checksDone+'/'+block.items.length+' completed');
+    body.appendChild(prog);
+
+    block.items.forEach((item,i)=>{
+      const key=block.label+'_'+i;
+      const isDone=!!checks[key];
+      const txt=typeof item==='object'?(item.job||item.biz||Object.values(item)[0]):item;
+      const row=dv('check-row');
+      const box=dv('check-box'+(isDone?' done':''));
+      const lbl=pt('check-label'+(isDone?' done':''),txt);
+      row.appendChild(box);row.appendChild(lbl);
+      row.addEventListener('click',()=>{
+        const cur=ls('checks_'+today(),{});
+        cur[key]=!cur[key];
+        lss('checks_'+today(),cur);
+        box.className='check-box'+(cur[key]?' done':'');
+        lbl.className='check-label'+(cur[key]?' done':'');
+        const d2=Object.values(ls('checks_'+today(),{})).filter(Boolean).length;
+        prog.textContent=block.items.filter((_,j)=>ls('checks_'+today(),{})[block.label+'_'+j]).length+'/'+block.items.length+' completed';
+      });
+      body.appendChild(row);
+    });
+
+    const arr=sp('sched-arr','▼');
+    const accent=dv('sched-hdr-accent',null,{style:{background:block.accent,minHeight:'40px'}});
+    const info=dv(null,[
+      pt('sched-time',block.time),
+      pt('sched-label',block.label),
+    ]);
+    const hdr=dv('sched-hdr',[accent,sp('sched-icon',block.icon),info,arr],{
+      onclick:()=>{
+        open=!open;body.classList.toggle('open',open);arr.style.transform=open?'rotate(180deg)':'none';
+      }
+    });
+    hdr.style.background='rgba(8,22,35,0.95)';
+
+    const wrap=dv('sched-block au2');
+    wrap.style.background='rgba(8,22,35,0.95)';
+    wrap.appendChild(hdr);wrap.appendChild(body);
+    pg.appendChild(wrap);
+  });
+}
+
+// ── DUAS TAB ─────────────────────────────────────────────────────────────────
+function renderDuas(pg){
+  pg.appendChild(dv('topnav au',[
+    pt('cinzel','Duas & Supplications',{style:{fontSize:20,fontWeight:700,color:'var(--teal)'}}),
+    pt(null,'Tap category to expand',{style:{fontSize:11,color:'var(--tx3)',marginTop:2}}),
+  ]));
+
+  DUAS.forEach(cat=>{
+    let open=false;
+    const catWrap=dv('dua-cat au2');
+    const hdr=dv('dua-cat-hdr',[
+      sp('dua-cat-lbl',cat.cat),
+      sp(null,'▼',{style:{fontSize:11,color:'var(--tx3)',transition:'transform 0.25s'}}),
+    ]);
+    const body=dv(null,null,{style:{display:'none'}});
+
+    hdr.addEventListener('click',()=>{
+      open=!open;
+      hdr.classList.toggle('open',open);
+      body.style.display=open?'block':'none';
+      hdr.lastChild.style.transform=open?'rotate(180deg)':'none';
+    });
+
+    cat.duas.forEach(dua=>{
+      const card=dv('dua-card');
+      const ar=pt('dua-ar');ar.textContent=dua.ar;card.appendChild(ar);
+      card.appendChild(pt('dua-tr',dua.tr));
+      card.appendChild(pt('dua-en',dua.en));
+      card.appendChild(sp('dua-src',dua.src));
+      body.appendChild(card);
+    });
+
+    catWrap.appendChild(hdr);catWrap.appendChild(body);
+    pg.appendChild(catWrap);
+  });
+}
+
+// ── DHIKR TAB ────────────────────────────────────────────────────────────────
+function renderDhikr(pg){
+  pg.appendChild(dv('topnav au',[
+    pt('cinzel','Dhikr Counter',{style:{fontSize:20,fontWeight:700,color:'var(--teal)'}}),
+    pt(null,'Tap the button to count',{style:{fontSize:11,color:'var(--tx3)',marginTop:2}}),
+  ]));
+
+  const today_key='dhikr_'+today();
+  const counts=ls(today_key,{});
+
+  DHIKR_TYPES.forEach(d=>{
+    const count=counts[d.name]||0;
+    const card=dv('dhikr-card au2');
+    card.appendChild(pt('dhikr-name',d.name));
+    const ar=pt('dhikr-ar');ar.textContent=d.ar;card.appendChild(ar);
+    card.appendChild(pt(null,d.tr,{style:{fontSize:13,color:'var(--tx3)',fontStyle:'italic',padding:'0 18px 8px'}}));
+    card.appendChild(pt(null,'✨ '+d.benefit,{style:{fontSize:12,color:'var(--teal)',padding:'0 18px 12px',opacity:0.7}}));
+
+    const cntEl=pt('dhikr-count',String(count));
+    const tgtEl=pt('dhikr-target','Target: '+d.target);
+    const bar=dv('pbar',dv('pbar-f',null,{style:{width:Math.min(count/d.target*100,100)+'%'}}),{style:{margin:'0 18px 10px',height:4}});
+
+    const btnEl=bt('dhikr-btn','+');
+    btnEl.addEventListener('click',()=>{
+      const c2=ls('dhikr_'+today(),{});
+      c2[d.name]=(c2[d.name]||0)+1;
+      lss('dhikr_'+today(),c2);
+      cntEl.textContent=String(c2[d.name]);
+      bar.firstChild.style.width=Math.min(c2[d.name]/d.target*100,100)+'%';
+      if(c2[d.name]===d.target){
+        btnEl.style.background='linear-gradient(135deg,#f59e0b,#fcd34d)';
+        cntEl.style.color='#f59e0b';
+      }
+    });
+
+    const ctrRow=dv('dhikr-counter',[
+      dv(null,[cntEl,tgtEl]),btnEl
+    ]);
+    card.appendChild(ctrRow);
+    card.appendChild(bar);
+
+    const rst=pt('dhikr-reset','↺ Reset today');
+    rst.addEventListener('click',()=>{
+      const c2=ls('dhikr_'+today(),{});
+      c2[d.name]=0;lss('dhikr_'+today(),c2);
+      cntEl.textContent='0';
+      bar.firstChild.style.width='0%';
+      btnEl.style.background='linear-gradient(135deg,var(--teal),var(--teal2))';
+      cntEl.style.color='var(--teal)';
+    });
+    card.appendChild(rst);
+    pg.appendChild(card);
+  });
+}
+
+// ── NAMAZ TAB ────────────────────────────────────────────────────────────────
+function renderNamaz(pg){
+  pg.appendChild(dv('topnav au',[
+    pt('cinzel','Namaz Guide',{style:{fontSize:20,fontWeight:700,color:'var(--teal)'}}),
+    pt(null,'Step-by-step salah guide',{style:{fontSize:11,color:'var(--tx3)',marginTop:2}}),
+  ]));
+
+  // How to pray steps
+  pg.appendChild(pt(null,'How to Pray',{style:{fontSize:10,fontWeight:700,color:'var(--teal)',letterSpacing:'1.5px',textTransform:'uppercase',padding:'0 16px 10px'}}));
+  const stepsCard=dv('card au2',null,{style:{margin:'0 16px 16px',padding:'4px 0'}});
+  SALAH_STEPS.forEach(s=>{
+    const step=dv('namaz-step',[
+      dv('namaz-num',String(s.n)),
+      dv(null,[
+        pt(null,s.title,{style:{fontSize:15,fontWeight:600,color:'var(--tx)',marginBottom:4}}),
+        pt('namaz-step-txt',s.desc),
+        s.ar?pt('namaz-step-ar',s.ar):null,
+      ].filter(Boolean))
+    ]);
+    stepsCard.appendChild(step);
+  });
+  pg.appendChild(stepsCard);
+
+  // Prayers
+  pg.appendChild(pt(null,'Daily Prayers',{style:{fontSize:10,fontWeight:700,color:'var(--teal)',letterSpacing:'1.5px',textTransform:'uppercase',padding:'0 16px 10px'}}));
+  PRAYERS.forEach(p=>{
+    const card=dv('namaz-prayer au2');
+    const hdr=dv('namaz-hdr',[
+      sp(null,p.icon,{style:{fontSize:24}}),
+      pt('namaz-name',p.name),
+      pt('namaz-rakaat',p.rakaat),
+    ]);
+    hdr.style.cursor='default';
+    card.appendChild(hdr);
+    pg.appendChild(card);
+  });
+}
+
+// ── SUNNAH TAB ───────────────────────────────────────────────────────────────
+function renderSunnah(pg){
+  pg.appendChild(dv('topnav au',[
+    pt('cinzel','Sunnah Acts',{style:{fontSize:20,fontWeight:700,color:'var(--teal)'}}),
+    pt(null,'Daily sunnah to implement',{style:{fontSize:11,color:'var(--tx3)',marginTop:2}}),
+  ]));
+
+  SUNNAH_LIST.forEach((s,i)=>{
+    const item=dv('sunnah-item au2');
+    item.style.animationDelay=(i*0.06)+'s';
+    item.appendChild(dv(null,[
+      sp('badge bt',String(i+1),{style:{marginBottom:8,display:'inline-block'}}),
+    ]));
+    item.appendChild(pt('sunnah-title',s.title));
+    item.appendChild(pt('sunnah-desc',s.desc));
+    item.appendChild(sp('sunnah-src','Source: '+s.src));
+    pg.appendChild(item);
+  });
+}
+
+// ── SHIELD TAB ───────────────────────────────────────────────────────────────
+function renderShield(pg){
+  pg.appendChild(dv('topnav au',[
+    pt('cinzel','Spiritual Shield',{style:{fontSize:20,fontWeight:700,color:'var(--teal)'}}),
+    pt(null,'Protection adhkar & duas',{style:{fontSize:11,color:'var(--tx3)',marginTop:2}}),
+  ]));
+
+  SHIELD_LIST.forEach((s,i)=>{
+    const sec=dv('shield-section au2');
+    sec.style.animationDelay=(i*0.08)+'s';
+    sec.appendChild(pt('shield-title','🛡️ '+s.title));
+    const ar=pt(null,null,{style:{fontFamily:'"Scheherazade New",serif',fontSize:20,color:'rgba(244,63,94,0.75)',direction:'rtl',textAlign:'right',lineHeight:2,marginBottom:8}});
+    ar.textContent=s.ar;sec.appendChild(ar);
+    sec.appendChild(pt(null,s.tr,{style:{fontSize:13,color:'#f87171',fontStyle:'italic',lineHeight:1.6,marginBottom:6}}));
+    sec.appendChild(pt(null,s.en,{style:{fontSize:14,color:'var(--tx2)',lineHeight:1.7,marginBottom:8}}));
+    sec.appendChild(sp(null,s.src,{style:{fontSize:11,color:'rgba(244,63,94,0.6)',fontWeight:600}}));
+    pg.appendChild(sec);
+  });
+}
+
+// ── STREAKS TAB ───────────────────────────────────────────────────────────────
+function renderStreaks(pg){
+  pg.appendChild(dv('topnav au',[
+    pt('cinzel','Streaks & Habits',{style:{fontSize:20,fontWeight:700,color:'var(--teal)'}}),
+    pt(null,'Track your consistency',{style:{fontSize:11,color:'var(--tx3)',marginTop:2}}),
+  ]));
+
+  // Overall stats
+  const allStreaks=STREAK_CATS.map(c=>{
+    let streak=0,d=new Date();
+    while(true){
+      const k=d.toISOString().split('T')[0];
+      if(!ls('streak_'+k,{})[c.id])break;
+      streak++;d.setDate(d.getDate()-1);
+    }
+    return{...c,streak};
+  });
+  const best=Math.max(...allStreaks.map(s=>s.streak));
+  const totalToday=allStreaks.filter(s=>ls('streak_'+today(),{})[s.id]).length;
+
+  const statsCard=dv('card-g au',null,{style:{margin:'0 16px 16px',padding:'18px'}});
+  statsCard.appendChild(dv(null,[
+    dv(null,[
+      pt('cinzel',String(totalToday),{style:{fontSize:28,fontWeight:700,color:'var(--teal)',marginBottom:2}}),
+      pt(null,'Today',{style:{fontSize:11,color:'var(--tx3)'}}),
+    ]),
+    dv(null,[
+      pt('cinzel',String(best),{style:{fontSize:28,fontWeight:700,color:'var(--blue)',marginBottom:2,textAlign:'right'}}),
+      pt(null,'Best streak',{style:{fontSize:11,color:'var(--tx3)',textAlign:'right'}}),
+    ]),
+  ],{style:{display:'flex',justifyContent:'space-between',marginBottom:12}}));
+  statsCard.appendChild(dv('pbar',dv('pbar-f',null,{style:{width:(totalToday/STREAK_CATS.length*100)+'%'}})));
+  pg.appendChild(statsCard);
+
+  const grid=dv('streak-grid au2');
+  allStreaks.forEach(cat=>{
+    const card=dv('streak-card');
+    card.appendChild(pt(null,cat.icon+' '+cat.label,{style:{fontSize:13,fontWeight:600,color:'var(--tx2)',marginBottom:10}}));
+    const num=pt('streak-num',String(cat.streak));
+    card.appendChild(num);
+    card.appendChild(pt(null,'day streak',{style:{fontSize:11,color:'var(--tx3)',marginTop:3}}));
+
+    // Last 7 dots
+    const dots=dv('streak-dots');
+    for(let i=6;i>=0;i--){
+      const d=new Date();d.setDate(d.getDate()-i);
+      const k=d.toISOString().split('T')[0];
+      const done=!!ls('streak_'+k,{})[cat.id];
+      dots.appendChild(dv('sdot'+(done?' done':'')));
+    }
+    card.appendChild(dots);
+
+    const isTodayDone=!!ls('streak_'+today(),{})[cat.id];
+    const tapBtn=bt('streak-tap',isTodayDone?'✓ Done Today':'Mark Today ✓');
+    if(isTodayDone)tapBtn.style.color='var(--teal)';
+    tapBtn.addEventListener('click',()=>{
+      const cur=ls('streak_'+today(),{});
+      cur[cat.id]=!cur[cat.id];
+      lss('streak_'+today(),cur);
+      tapBtn.textContent=cur[cat.id]?'✓ Done Today':'Mark Today ✓';
+      tapBtn.style.color=cur[cat.id]?'var(--teal)':'var(--tx2)';
+      // Recalculate streak dot
+      dots.lastChild.className='sdot'+(cur[cat.id]?' done':'');
+      let streak2=0;const d2=new Date();
+      while(true){
+        const k=d2.toISOString().split('T')[0];
+        if(!ls('streak_'+k,{})[cat.id])break;
+        streak2++;d2.setDate(d2.getDate()-1);
+      }
+      num.textContent=String(streak2);
+    });
+    card.appendChild(tapBtn);
+    grid.appendChild(card);
+  });
+  pg.appendChild(grid);
+
+  // Footer
+  pg.appendChild(dv('footer',[
+    pt(null,'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ',{style:{fontFamily:'"Scheherazade New",serif',fontSize:16,color:'rgba(0,212,184,0.25)',direction:'rtl',marginBottom:5}}),
+    pt(null,'Designed with love by Ajumal 🤍'),
+    pt(null,'May Allah make us the best version of ourselves. Ameen.'),
+  ]));
+}
+
+// ── TABS ──────────────────────────────────────────────────────────────────────
+const TABS=[
+  {k:'schedule',l:'Schedule',e:'📋'},
+  {k:'duas',l:'Duas',e:'🤲'},
+  {k:'dhikr',l:'Dhikr',e:'📿'},
+  {k:'namaz',l:'Namaz',e:'🕌'},
+  {k:'sunnah',l:'Sunnah',e:'⭐'},
+  {k:'shield',l:'Shield',e:'🛡️'},
+  {k:'streaks',l:'Streaks',e:'🔥'},
+];
+
+function renderTabBar(){
+  const tb=document.getElementById('tabbar');clr(tb);
+  TABS.forEach(t=>{
+    const b=bt('tab '+(TAB===t.k?'on':''),[sp('tab-i',t.e),sp('tab-l',t.l)],{onclick:()=>{TAB=t.k;renderAll();}});
+    tb.appendChild(b);
+  });
+}
+
+function renderPage(){
+  const pg=document.getElementById('page');
+  pg.scrollTop=0;clr(pg);
+  switch(TAB){
+    case'schedule':renderSchedule(pg);break;
+    case'duas':renderDuas(pg);break;
+    case'dhikr':renderDhikr(pg);break;
+    case'namaz':renderNamaz(pg);break;
+    case'sunnah':renderSunnah(pg);break;
+    case'shield':renderShield(pg);break;
+    case'streaks':renderStreaks(pg);break;
+  }
+  if(SCROLL[TAB])setTimeout(()=>{pg.scrollTop=SCROLL[TAB];},30);
+  pg.addEventListener('scroll',()=>{SCROLL[TAB]=pg.scrollTop;},{passive:true});
+}
+
+function renderAll(){renderTabBar();renderPage();}
+window.addEventListener('DOMContentLoaded',renderAll);
+</script>
+</body>
+</html>
